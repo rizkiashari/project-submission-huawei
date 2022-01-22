@@ -5,12 +5,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-<<<<<<< HEAD
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-=======
->>>>>>> 47a3c23e28a6873d455d353b20700cf40b8cd69d
-
     <queries>
         <intent>
             <action android:name="com.huawei.hms.core.aidlservice" />
@@ -25,12 +21,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RestoApp">
         <activity
-<<<<<<< HEAD
-            android:name=".MapActivity"
-=======
             android:name=".Home"
->>>>>>> 47a3c23e28a6873d455d353b20700cf40b8cd69d
-            android:exported="false" />
+            android:exported="true"/>
         <activity
             android:name=".MainActivity"
             android:exported="true" />
