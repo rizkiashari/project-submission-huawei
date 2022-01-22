@@ -1,7 +1,6 @@
 package com.rizkiashari.restoapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,7 +15,6 @@ import com.huawei.hms.support.account.request.AccountAuthParams;
 import com.huawei.hms.support.account.request.AccountAuthParamsHelper;
 import com.huawei.hms.support.account.result.AuthAccount;
 import com.huawei.hms.support.account.service.AccountAuthService;
-import com.huawei.hms.support.api.entity.common.CommonConstant;
 import com.huawei.hms.support.hwid.ui.HuaweiIdAuthButton;
 
 public class SignInAcrivity extends AppCompatActivity {
@@ -76,7 +74,7 @@ public class SignInAcrivity extends AppCompatActivity {
         Log.i(TAG, "openid:" + authAccount.getOpenId());
         Log.i(TAG, "unionid:" + authAccount.getUnionId());
 
-        Intent i = new Intent(SignInAcrivity.this, MainActivity.class);
+        Intent i = new Intent(SignInAcrivity.this, Home.class);
         i.putExtra("name", authAccount.getDisplayName());
         i.putExtra("pic", authAccount.getAvatarUriString());
         i.putExtra("email", authAccount.getEmail());
