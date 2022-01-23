@@ -22,16 +22,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RestoApp">
         <activity
-            android:name=".SplashScreen"
-            android:exported="false" />
+            android:name=".SignInAcrivity"
+            android:exported="true" />
         <activity
             android:name=".DetailActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Home"
             android:exported="true" />
         <activity
-            android:name=".SignInAcrivity"
+            android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
