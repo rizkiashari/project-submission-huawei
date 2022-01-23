@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 
 import com.rizkiashari.restoapp.model.RvModel;
 
@@ -30,6 +33,12 @@ public class Home extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         recyclerView.setAdapter(staticRvAdapter);
 
+    }
 
+//    Add New Resto
+    public void addResto(View view){
+        Intent intent = new Intent(Home.this, AddRestoActivity.class);
+
+        startActivity(intent);
     }
 }

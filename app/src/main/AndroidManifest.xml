@@ -22,6 +22,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RestoApp">
         <activity
+            android:name=".AddRestoActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignInAcrivity"
             android:exported="true" />
         <activity
