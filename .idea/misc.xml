@@ -3,28 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-<<<<<<< HEAD
-        <entry key="..\:/Documents/Binus/Materi Semester 5/moprog/food.co/project-submission-huawei/app/src/main/res/layout/activity_details.xml" value="0.5" />
-        <entry key="..\:/Documents/Binus/Materi Semester 5/moprog/food.co/project-submission-huawei/app/src/main/res/layout/activity_main.xml" value="0.3625" />
-        <entry key="..\:/Documents/Binus/Materi Semester 5/moprog/food.co/project-submission-huawei/app/src/main/res/layout/activity_signin.xml" value="0.22" />
-        <entry key="..\:/Documents/Binus/Materi Semester 5/moprog/food.co/project-submission-huawei/app/src/main/res/layout/splashscreen.xml" value="0.22" />
-        <entry key="..\:/Tugas-Kuliah/Tugas/MobProg/RestoApp/app/src/main/res/layout/activity_signin.xml" value="0.152" />
-        <entry key="..\:/Users/asus/AndroidStudioProjects/project-submission-huawei/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
-        <entry key="..\:/Users/asus/AndroidStudioProjects/project-submission-huawei/app/src/main/res/layout/activity_signin.xml" value="0.2957427536231884" />
-        <entry key="..\:/Users/asus/AndroidStudioProjects/project-submission-huawei/app/src/main/res/layout/splashscreen.xml" value="0.3625" />
-=======
         <entry key="..\:/Tugas-Kuliah/Tugas/MobProg/RestoApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.22239583333333332" />
-        <entry key="..\:/Tugas-Kuliah/Tugas/MobProg/RestoApp/app/src/main/res/layout/activity_home.xml" value="0.2817028985507246" />
         <entry key="..\:/Tugas-Kuliah/Tugas/MobProg/RestoApp/app/src/main/res/layout/activity_main.xml" value="0.10030395136778116" />
         <entry key="..\:/Tugas-Kuliah/Tugas/MobProg/RestoApp/app/src/main/res/layout/activity_signin.xml" value="0.152" />
+        <entry key="app/src/main/res/drawable/rvbackgorund.xml" value="0.3260416666666667" />
+        <entry key="app/src/main/res/drawable/staticrvitem.xml" value="0.13240740740740742" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.3062635054628034" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.15070921985815602" />
         <entry key="app/src/main/res/layout/activity_signin.xml" value="0.15070921985815602" />
->>>>>>> f61835b91d1f616d6dc92737ef911f57e3066fd4
+        <entry key="app/src/main/res/layout/staticrvlayoutitem.xml" value="0.3098958333333333" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
