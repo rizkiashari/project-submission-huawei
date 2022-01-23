@@ -36,6 +36,15 @@ public final class RestoInfo extends CloudDBZoneObject {
         super(RestoInfo.class);
     }
 
+    public RestoInfo(Class<? extends CloudDBZoneObject> clazz, Integer id, String image, String namaResto, String locationResto, Date openDate) {
+        super(clazz);
+        this.id = id;
+        this.image = image;
+        this.namaResto = namaResto;
+        this.locationResto = locationResto;
+        this.openDate = openDate;
+    }
+
     public void setId(Integer id) {
         this.id = id;
     }

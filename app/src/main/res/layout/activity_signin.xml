@@ -33,13 +33,11 @@
     <ImageView
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:layout_marginEnd="56dp"
         android:layout_marginBottom="308dp"
         android:src="@drawable/logo2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-=======
         android:layout_marginTop="300dp"
         android:src="@drawable/logo"
         app:layout_constraintBottom_toTopOf="@+id/huaweiIdAuthButton"
@@ -48,6 +46,5 @@
         app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
->>>>>>> f61835b91d1f616d6dc92737ef911f57e3066fd4
 
 </androidx.constraintlayout.widget.ConstraintLayout>
