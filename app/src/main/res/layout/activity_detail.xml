@@ -33,17 +33,38 @@
                     android:text="Tava Restaurant"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="25dp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="kazi Deiry, Taiger Pass,Chittagong"
-                    />
 
-                <ImageView
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/location"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="kazi Deiry, Taiger Pass,Chittagong"
+                        />
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:layout_marginTop="20dp"
-                    android:src="@drawable/tava"/>
+                    app:cardCornerRadius="12dp">
+
+                    <ImageView
+                        android:id="@+id/iv_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/hotel1"/>
+                </androidx.cardview.widget.CardView>
 
                 <GridLayout
                     android:layout_width="match_parent"
@@ -56,23 +77,49 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="match_parent"
+                        <LinearLayout
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Open today"/>
+                            android:orientation="horizontal"
+                            android:gravity="center">
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginRight="5dp"
+                                android:src="@drawable/time"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Open today"/>
+                        </LinearLayout>
+
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="155dp"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-medium"
-                            android:text="10:00 AM - 12:00 PM"/>
+                            android:text="10:00 AM - 12:00 PM" />
                     </LinearLayout>
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:orientation="horizontal"
                         android:layout_gravity="end"
                         android:layout_marginTop="10dp"
-                        android:text="Visit the restaurant" />
+                        android:gravity="center">
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/direction"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/blue"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Visit the restaurant" />
+                    </LinearLayout>
+
 
                 </GridLayout>
 
@@ -87,34 +134,64 @@
             android:layout_height="wrap_content"
             app:cardElevation="6dp"
             app:cardCornerRadius="12dp"
+            android:layout_marginTop="15dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1">
 
             <GridLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:columnCount="2">
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="List other restaurant"
+                        android:fontFamily="sans-serif-medium"
+                        android:textSize="25dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="check the menu at this restaurant"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="See All"
+                        android:textColor="@color/green" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/seeall"/>
+                </LinearLayout>
 
             </GridLayout>
 
-            <LinearLayout
+            <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="25dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="List other restaurant"
-                    android:fontFamily="sans-serif-medium"
-                    android:textSize="25dp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="check the menu at this restaurant"
-                    />
-            </LinearLayout>
+                android:layout_height="253dp"
+                android:layout_marginTop="80dp"
+                tools:listitem="@layout/activity_detail_item" />
 
 
         </androidx.cardview.widget.CardView>
