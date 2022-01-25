@@ -1,15 +1,24 @@
 package com.rizkiashari.restoapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.tabs.TabLayout;
+import com.huawei.hms.searchkit.SearchKitInstance;
+import com.huawei.hms.searchkit.bean.CommonSearchRequest;
+import com.huawei.hms.searchkit.bean.WebSearchRequest;
 import com.rizkiashari.restoapp.API.APIRequestData;
 import com.rizkiashari.restoapp.API.RetroServer;
 import com.rizkiashari.restoapp.Adapter.AdapterData;
@@ -32,10 +41,14 @@ public class Home extends AppCompatActivity {
     private RecyclerView.LayoutManager lmData;
     private List<DataModel> listFood = new ArrayList<>();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        SearchKitInstance.enableLog();
+        SearchKitInstance.init(this, "103039265");
 
         ArrayList<RvModel> item = new ArrayList<>();
         item.add(new RvModel(R.drawable.briyani, "Mas Dar", "Nasi Briyani"));
@@ -46,6 +59,8 @@ public class Home extends AppCompatActivity {
         staticRvAdapter = new StaticRvAdapter(item);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         recyclerView.setAdapter(staticRvAdapter);
+
+
 
         rvData = findViewById(R.id.rvData);
         lmData = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false);
@@ -89,4 +104,7 @@ public class Home extends AppCompatActivity {
 
         startActivity(intent);
     }
+
+    //Search
+
 }
