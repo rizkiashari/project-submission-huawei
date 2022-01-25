@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.rizkiashari.restoapp.R;
 import com.rizkiashari.restoapp.model.DataModel;
 
+import java.net.URL;
 import java.util.List;
 
 public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {
