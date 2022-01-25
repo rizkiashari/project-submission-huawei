@@ -1,15 +1,16 @@
-package com.rizkiashari.restoapp;
+package com.rizkiashari.restoapp2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MapActivity extends AppCompatActivity {
+
+public class DetailActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map);
+        setContentView(R.layout.activity_detail);
 
 
     }

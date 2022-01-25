@@ -7,7 +7,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.rizkiashari.restoapp"
+        applicationId "com.rizkiashari.restoapp2"
         minSdk 21
         targetSdk 31
         versionCode 1
@@ -52,5 +52,7 @@ dependencies {
     implementation 'com.huawei.agconnect:agconnect-cloud-database:1.5.0.300'
     implementation 'com.huawei.hms:maps:5.0.5.301'
     implementation 'com.huawei.agconnect:agconnect-auth:1.5.0.300'
+    implementation 'com.huawei.hms:ads-lite:13.4.51.300'
+    implementation 'com.huawei.hms:ads-consent:3.4.51.300'
 
 }

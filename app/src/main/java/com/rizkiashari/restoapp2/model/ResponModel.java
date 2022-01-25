@@ -1,4 +1,4 @@
-package com.rizkiashari.restoapp.model;
+package com.rizkiashari.restoapp2.model;
 
 import java.util.List;
 

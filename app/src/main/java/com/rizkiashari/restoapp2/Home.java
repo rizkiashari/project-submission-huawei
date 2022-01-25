@@ -1,26 +1,24 @@
-package com.rizkiashari.restoapp;
+package com.rizkiashari.restoapp2;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.rizkiashari.restoapp.API.APIRequestData;
-import com.rizkiashari.restoapp.API.RetroServer;
-import com.rizkiashari.restoapp.Adapter.AdapterData;
-import com.rizkiashari.restoapp.model.DataModel;
-import com.rizkiashari.restoapp.model.ResponModel;
-import com.rizkiashari.restoapp.model.RvModel;
+
+import com.huawei.hms.ads.AdParam;
+import com.huawei.hms.ads.banner.BannerView;
+import com.rizkiashari.restoapp2.API.APIRequestData;
+import com.rizkiashari.restoapp2.API.RetroServer;
+import com.rizkiashari.restoapp2.Adapter.AdapterData;
+import com.rizkiashari.restoapp2.model.DataModel;
+import com.rizkiashari.restoapp2.model.ResponModel;
+import com.rizkiashari.restoapp2.model.RvModel;
+
+import com.huawei.hms.ads.HwAds;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +34,13 @@ public class Home extends AppCompatActivity {
     private RecyclerView.Adapter adData;
     private RecyclerView.LayoutManager lmData;
     private List<DataModel> listFood = new ArrayList<>();
+
+    private static String adID ="testw6vs28auh3";
+    private static String reward_ad_id ="testx9dtjwj8hp";
+    private ConstraintLayout constLytBanner;
+
+    private BannerView bannerView;
+    private static final int REFRESH_TIME = 30;
 
 
     @Override
@@ -59,6 +64,14 @@ public class Home extends AppCompatActivity {
         rvData.setLayoutManager(lmData);
 
         retrieveData();
+
+        HwAds.init(this);
+
+        bannerView = findViewById(R.id.hw_banner_view);
+        bannerView.setBannerRefresh(REFRESH_TIME);
+        AdParam adParam = new AdParam.Builder().build();
+        bannerView.loadAd(adParam);
+
 
     }
 

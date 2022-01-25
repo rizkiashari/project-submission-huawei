@@ -1,4 +1,4 @@
-package com.rizkiashari.restoapp.Adapter;
+package com.rizkiashari.restoapp2.Adapter;
 
 import android.content.Context;
 import android.net.Uri;
@@ -11,10 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.rizkiashari.restoapp.R;
-import com.rizkiashari.restoapp.model.DataModel;
+import com.rizkiashari.restoapp2.R;
+import com.rizkiashari.restoapp2.model.DataModel;
 
-import java.net.URL;
 import java.util.List;
 
 public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {

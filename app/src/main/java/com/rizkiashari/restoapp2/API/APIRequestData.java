@@ -1,6 +1,6 @@
-package com.rizkiashari.restoapp.API;
+package com.rizkiashari.restoapp2.API;
 
-import com.rizkiashari.restoapp.model.ResponModel;
+import com.rizkiashari.restoapp2.model.ResponModel;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
