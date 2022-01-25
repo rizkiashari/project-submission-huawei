@@ -108,17 +108,37 @@
                             android:layout_width="15dp"
                             android:layout_height="15dp"
                             android:layout_marginRight="5dp"
-                            android:src="@drawable/direction"/>
+                            android:src="@drawable/timer"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/blue"
+                            android:textColor="@color/green"
                             android:fontFamily="sans-serif-medium"
-                            android:text="Visit the restaurant" />
+                            android:text="Remind Me" />
                     </LinearLayout>
 
 
                 </GridLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/direction"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/blue"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Visit the restaurant" />
+                </LinearLayout>
 
 
             </LinearLayout>
