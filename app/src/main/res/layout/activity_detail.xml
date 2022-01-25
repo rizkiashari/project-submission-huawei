@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey">
+    android:background="@color/grey"
+    tools:context=".DetailActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -173,7 +174,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="List other restaurant"
+                        android:text="Menu"
                         android:fontFamily="sans-serif-medium"
                         android:textSize="25dp"/>
                     <TextView
@@ -208,9 +209,11 @@
             </GridLayout>
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_listMenu"
                 android:layout_width="match_parent"
-                android:layout_height="253dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="80dp"
+                tools:itemCount="5"
                 tools:listitem="@layout/activity_detail_item" />
 
         </androidx.cardview.widget.CardView>
