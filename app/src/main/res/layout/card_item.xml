@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="6dp"
+        android:id="@+id/layoutUtama"
         >
         <TextView
             android:layout_width="wrap_content"
@@ -23,6 +24,7 @@
             android:layout_height="100dp"
             android:id="@+id/picture"
             />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,6 +41,7 @@
                 android:textColor="#000"
                 android:layout_marginBottom="4dp"
                 />
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -59,7 +62,17 @@
                     android:layout_marginLeft="10dp"
                     android:textSize="16dp"
                     />
+
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/viewDetail"
+                android:layout_width="110dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="View Detail"
+                android:textColor="#000"/>
         </LinearLayout>
 
     </LinearLayout>

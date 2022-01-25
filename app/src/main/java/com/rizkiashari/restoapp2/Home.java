@@ -6,6 +6,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+<<<<<<< HEAD:app/src/main/java/com/rizkiashari/restoapp2/Home.java
+=======
+import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+>>>>>>> 9aea9a08a8c13283c457c4647b725b6dead236ea:app/src/main/java/com/rizkiashari/restoapp/Home.java
 import android.widget.Toast;
 
 
@@ -64,6 +73,41 @@ public class Home extends AppCompatActivity {
         rvData.setLayoutManager(lmData);
 
         retrieveData();
+//        getDetail(lmData.get);
+    }
+
+    public void getDetail(int id){
+        APIRequestData getDetails = RetroServer.konekRetrofit().create(APIRequestData.class);
+        Call<ResponModel> detail = getDetails.getDetails(id);
+
+
+        detail.enqueue(new Callback<ResponModel>() {
+            @Override
+            public void onResponse(Call<ResponModel> call, Response<ResponModel> response) {
+                String status = response.body().getStatus();
+                String message = response.body().getMessage();
+
+                Toast.makeText(Home.this,"Status: "+status +" | message "
+                                + message,
+                        Toast.LENGTH_SHORT).show();
+                listFood = response.body().getData();
+
+                adData = new AdapterData(Home.this, listFood);
+                rvData.setAdapter(adData);
+                adData.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onFailure(Call<ResponModel> call, Throwable t) {
+                Toast.makeText(Home.this, "Server Error: "+ t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        ImageView img = findViewById(R.id.imageView2);
+        img.setOnClickListener(e -> {
+            Intent a = new Intent(Home.this, DetailActivity.class);
+            startActivity(a);
+        });
 
         HwAds.init(this);
 
