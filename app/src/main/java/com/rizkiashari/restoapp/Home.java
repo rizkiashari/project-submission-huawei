@@ -15,10 +15,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.material.tabs.TabLayout;
-import com.huawei.hms.searchkit.SearchKitInstance;
-import com.huawei.hms.searchkit.bean.CommonSearchRequest;
-import com.huawei.hms.searchkit.bean.WebSearchRequest;
 import com.rizkiashari.restoapp.API.APIRequestData;
 import com.rizkiashari.restoapp.API.RetroServer;
 import com.rizkiashari.restoapp.Adapter.AdapterData;
@@ -46,9 +42,6 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
-        SearchKitInstance.enableLog();
-        SearchKitInstance.init(this, "103039265");
 
         ArrayList<RvModel> item = new ArrayList<>();
         item.add(new RvModel(R.drawable.briyani, "Mas Dar", "Nasi Briyani"));

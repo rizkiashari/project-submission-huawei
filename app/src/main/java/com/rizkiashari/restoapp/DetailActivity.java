@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.huawei.hms.searchkit.SearchKitInstance;
 
 public class DetailActivity extends AppCompatActivity {
 
