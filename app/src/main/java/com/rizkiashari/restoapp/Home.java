@@ -53,8 +53,6 @@ public class Home extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         recyclerView.setAdapter(staticRvAdapter);
 
-
-
         rvData = findViewById(R.id.rvData);
         lmData = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false);
 
@@ -91,12 +89,6 @@ public class Home extends AppCompatActivity {
         });
     }
 
-//    Add New Resto
-    public void addResto(View view){
-        Intent intent = new Intent(Home.this, AddRestoActivity.class);
-
-        startActivity(intent);
-    }
 
     //Search
 
