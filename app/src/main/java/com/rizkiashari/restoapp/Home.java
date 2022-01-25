@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -60,6 +61,12 @@ public class Home extends AppCompatActivity {
 
         retrieveData();
 
+        ImageView img = findViewById(R.id.imageView2);
+        img.setOnClickListener(e -> {
+//            Intent a = new Intent(this,DetailActivity.class);
+//            startActivity(a);
+        });
+
     }
 
     public void retrieveData(){
@@ -88,6 +95,8 @@ public class Home extends AppCompatActivity {
             }
         });
     }
+
+
 
 
     //Search
