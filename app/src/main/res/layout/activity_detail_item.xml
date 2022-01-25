@@ -13,6 +13,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/idMenu"
+            android:visibility="gone"
+            />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -24,7 +30,7 @@
                 app:cardCornerRadius="8dp">
 
                 <ImageView
-                    android:id="@+id/iv_image"
+                    android:id="@+id/iv_pictureMenu"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="centerCrop"
@@ -47,42 +53,43 @@
                 android:padding="8dp">
 
                 <TextView
-                    android:id="@+id/tv_name"
+                    android:id="@+id/tv_nameMenu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
-                    tools:text="Nama Hotel"
+                    android:fontFamily="sans-serif-medium"
+                    tools:text="Nama Makanan"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
-                    <ImageView
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/location"/>
+<!--                    <ImageView-->
+<!--                        android:layout_width="15dp"-->
+<!--                        android:layout_height="15dp"-->
+<!--                        android:layout_marginRight="5dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:src="@drawable/location"/>-->
 
                     <TextView
-                        android:id="@+id/tv_price"
+                        android:id="@+id/tv_priceMenu"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        tools:text="kazi Deiry, Taiger Pass Chittagong"
+                        tools:text="Rp. 28.000"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
                 </LinearLayout>
 
             </LinearLayout>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Check"
-                android:layout_marginStart="10dp"
-                android:layout_gravity="center"
-                android:textSize="9sp"
-                android:backgroundTint="@color/green"/>
+<!--            <Button-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Check"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:textSize="9sp"-->
+<!--                android:backgroundTint="@color/green"/>-->
         </LinearLayout>
     </LinearLayout>
 
