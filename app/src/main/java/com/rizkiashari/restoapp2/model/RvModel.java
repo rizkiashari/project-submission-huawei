@@ -1,4 +1,4 @@
-package com.rizkiashari.restoapp.model;
+package com.rizkiashari.restoapp2.model;
 
 public class RvModel {
     private int image;

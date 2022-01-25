@@ -1,4 +1,4 @@
-package com.rizkiashari.restoapp;
+package com.rizkiashari.restoapp2;
 
 import org.junit.Test;
 

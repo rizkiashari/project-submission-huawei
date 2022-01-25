@@ -1,7 +1,6 @@
-package com.rizkiashari.restoapp.model;
+package com.rizkiashari.restoapp2.model;
 
 import android.content.Context;
-import android.nfc.Tag;
 import android.util.Log;
 
 import com.huawei.agconnect.cloud.database.AGConnectCloudDB;
