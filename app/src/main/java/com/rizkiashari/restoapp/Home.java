@@ -59,6 +59,35 @@ public class Home extends AppCompatActivity {
         rvData.setLayoutManager(lmData);
 
         retrieveData();
+//        getDetail(lmData.get);
+    }
+
+    public void getDetail(int id){
+        APIRequestData getDetails = RetroServer.konekRetrofit().create(APIRequestData.class);
+        Call<ResponModel> detail = getDetails.getDetails(id);
+
+
+        detail.enqueue(new Callback<ResponModel>() {
+            @Override
+            public void onResponse(Call<ResponModel> call, Response<ResponModel> response) {
+                String status = response.body().getStatus();
+                String message = response.body().getMessage();
+
+                Toast.makeText(Home.this,"Status: "+status +" | message "
+                                + message,
+                        Toast.LENGTH_SHORT).show();
+                listFood = response.body().getData();
+
+                adData = new AdapterData(Home.this, listFood);
+                rvData.setAdapter(adData);
+                adData.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onFailure(Call<ResponModel> call, Throwable t) {
+                Toast.makeText(Home.this, "Server Error: "+ t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 
@@ -90,6 +119,5 @@ public class Home extends AppCompatActivity {
     }
 
 
-    //Search
 
 }

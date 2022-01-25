@@ -28,6 +28,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Tava Restaurant"
+                    android:id="@+id/deteilNameResto"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="25dp"/>
 
@@ -42,11 +43,12 @@
                         android:layout_height="15dp"
                         android:layout_marginRight="5dp"
                         android:src="@drawable/location"/>
+
                     <TextView
+                        android:id="@+id/deteilLocation"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="kazi Deiry, Taiger Pass,Chittagong"
-                        />
+                        android:layout_height="match_parent"
+                        android:text="kazi Deiry, Taiger Pass,Chittagong" />
                 </LinearLayout>
 
                 <androidx.cardview.widget.CardView
@@ -56,10 +58,11 @@
                     app:cardCornerRadius="12dp">
 
                     <ImageView
-                        android:id="@+id/iv_image"
+                        android:id="@+id/deteilPicture"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="centerCrop"
+
                         android:src="@drawable/hotel1"/>
                 </androidx.cardview.widget.CardView>
 

@@ -1,16 +1,20 @@
 package com.rizkiashari.restoapp.Adapter;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.rizkiashari.restoapp.DetailActivity;
 import com.rizkiashari.restoapp.R;
 import com.rizkiashari.restoapp.model.DataModel;
 
@@ -21,6 +25,7 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {
 
     private Context ctx;
     private List<DataModel> listFood;
+    private Activity activity;
 
     public AdapterData(Context ctx, List<DataModel> listFood) {
         this.ctx = ctx;
@@ -43,6 +48,21 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {
         holder.picture.setImageURI(Uri.parse(dm.getPicture()));
         holder.nameResto.setText(dm.getNamaResto());
         holder.locationResto.setText(dm.getLocationResto());
+
+        holder.layoutUtama.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent goDetail = new Intent(activity, DetailActivity.class);
+                goDetail.putExtra("Intent name Resto: ", dm.getNamaResto());
+                goDetail.putExtra("Intent Open Date: ", dm.getOpenDate());
+                goDetail.putExtra("Intent Picture: ", dm.getPicture());
+                goDetail.putExtra("Intent Location: ", dm.getLocationResto());
+                goDetail.putExtra("Intent Address: ", dm.getAddressResto());
+
+                activity.startActivity(goDetail);
+            }
+        });
+
     }
 
     @Override
@@ -53,6 +73,7 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {
     public class HolderData extends RecyclerView.ViewHolder{
         ImageView picture;
         TextView nameResto, locationResto, idResto;
+        LinearLayout layoutUtama;
 
         public HolderData(@NonNull View itemView) {
             super(itemView);
@@ -61,6 +82,8 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {
             idResto = itemView.findViewById(R.id.idResto);
             nameResto = itemView.findViewById(R.id.namaResto);
             locationResto = itemView.findViewById(R.id.locationResto);
+
+            layoutUtama = itemView.findViewById(R.id.layoutUtama);
         }
     }
 
