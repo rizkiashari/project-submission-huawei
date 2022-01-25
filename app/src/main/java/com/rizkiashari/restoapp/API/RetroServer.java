@@ -1,4 +1,4 @@
-package com.rizkiashari.restoapp2.API;
+package com.rizkiashari.restoapp.API;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

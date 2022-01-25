@@ -1,4 +1,4 @@
-package com.rizkiashari.restoapp2.model;
+package com.rizkiashari.restoapp.model;
 
 public class DataModel  {
 

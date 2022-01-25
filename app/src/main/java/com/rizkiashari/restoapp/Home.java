@@ -1,31 +1,25 @@
-package com.rizkiashari.restoapp2;
+package com.rizkiashari.restoapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
-<<<<<<< HEAD:app/src/main/java/com/rizkiashari/restoapp2/Home.java
-=======
-import android.util.Log;
-import android.view.View;
-import android.widget.EditText;
+
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
->>>>>>> 9aea9a08a8c13283c457c4647b725b6dead236ea:app/src/main/java/com/rizkiashari/restoapp/Home.java
 import android.widget.Toast;
 
 
 import com.huawei.hms.ads.AdParam;
 import com.huawei.hms.ads.banner.BannerView;
-import com.rizkiashari.restoapp2.API.APIRequestData;
-import com.rizkiashari.restoapp2.API.RetroServer;
-import com.rizkiashari.restoapp2.Adapter.AdapterData;
-import com.rizkiashari.restoapp2.model.DataModel;
-import com.rizkiashari.restoapp2.model.ResponModel;
-import com.rizkiashari.restoapp2.model.RvModel;
+import com.rizkiashari.restoapp.API.APIRequestData;
+import com.rizkiashari.restoapp.API.RetroServer;
+import com.rizkiashari.restoapp.Adapter.AdapterData;
+import com.rizkiashari.restoapp.model.DataModel;
+import com.rizkiashari.restoapp.model.ResponModel;
+import com.rizkiashari.restoapp.model.RvModel;
 
 import com.huawei.hms.ads.HwAds;
 

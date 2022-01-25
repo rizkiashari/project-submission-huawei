@@ -1,4 +1,4 @@
-package com.rizkiashari.restoapp2;
+package com.rizkiashari.restoapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
