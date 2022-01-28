@@ -41,7 +41,6 @@
         android:layout_marginTop="300dp"
         android:src="@drawable/logo"
         app:layout_constraintBottom_toTopOf="@+id/huaweiIdAuthButton"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"

@@ -67,7 +67,6 @@ public class Home extends AppCompatActivity {
         rvData.setLayoutManager(lmData);
 
         retrieveData();
-//        getDetail(lmData.get);
     }
 
     public void getDetail(int id){
