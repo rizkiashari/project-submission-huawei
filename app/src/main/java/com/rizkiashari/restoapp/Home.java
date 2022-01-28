@@ -9,10 +9,14 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 
+import com.huawei.hms.ads.AdListener;
 import com.huawei.hms.ads.AdParam;
+import com.huawei.hms.ads.BannerAdSize;
 import com.huawei.hms.ads.banner.BannerView;
 import com.rizkiashari.restoapp.API.APIRequestData;
 import com.rizkiashari.restoapp.API.RetroServer;
@@ -39,11 +43,10 @@ public class Home extends AppCompatActivity {
     private List<DataModel> listFood = new ArrayList<>();
 
     private static String adID ="testw6vs28auh3";
-    private static String reward_ad_id ="testx9dtjwj8hp";
-    private ConstraintLayout constLytBanner;
 
-    private BannerView bannerView;
     private static final int REFRESH_TIME = 30;
+
+
 
 
     @Override
@@ -68,6 +71,22 @@ public class Home extends AppCompatActivity {
 
         retrieveData();
 //        getDetail(lmData.get);
+        HwAds.init(this);
+
+        BannerView bannerView = findViewById(R.id.hw_banner_view);
+        bannerView.setBannerRefresh(REFRESH_TIME);
+        AdParam adParam = new AdParam.Builder().build();
+        bannerView.loadAd(adParam);
+
+        BannerView topbannerView = new BannerView(this);
+        topbannerView.setAdId(adID);
+        topbannerView.setBannerAdSize(BannerAdSize.BANNER_SIZE_SMART);
+        topbannerView.loadAd(adParam);
+
+        RelativeLayout view = findViewById(R.id.relLayout);
+        view.addView(topbannerView);
+
+
     }
 
     public void getDetail(int id){
@@ -103,13 +122,6 @@ public class Home extends AppCompatActivity {
             startActivity(a);
         });
 
-        HwAds.init(this);
-
-        bannerView = findViewById(R.id.hw_banner_view);
-        bannerView.setBannerRefresh(REFRESH_TIME);
-        AdParam adParam = new AdParam.Builder().build();
-        bannerView.loadAd(adParam);
-
 
     }
 
@@ -139,6 +151,8 @@ public class Home extends AppCompatActivity {
             }
         });
     }
+
+
 
 
     //Search
